@@ -1170,19 +1170,17 @@
             const absGrowth = Math.abs(growth).toFixed(2);
             
             // Color Logic: 
-            // Normal (inverse=false): Increase = Green (Good), Decrease = Red (Bad) 
-            // Inverse (inverse=true): Increase = Red (Bad), Decrease = Green (Good)
-            // Note: Adjust colors based on preference. Here using Green for "Good trend"
+            // All: Increase = Red, Decrease = Green
             
             let colorClass = 'text-gray-500';
             let icon = '';
             
             if (growth > 0) {
                 icon = '↑';
-                colorClass = inverse ? 'text-red-500' : 'text-green-500';
+                colorClass = 'text-red-500';
             } else if (growth < 0) {
                 icon = '↓';
-                colorClass = inverse ? 'text-green-500' : 'text-red-500';
+                colorClass = 'text-green-500';
             } else {
                 icon = '-';
             }
